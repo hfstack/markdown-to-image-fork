@@ -179,14 +179,14 @@ function App() {
               canCopy
               canDownload
             >
-              <Md2PosterHeader className='flex justify-between items-center px-4'>
-                <span>@用户昵称</span>
-                <span>{new Date().toISOString().slice(0, 10)}</span>
+              <Md2PosterHeader className='flex justify-between items-center justify-center px-4 text-center'>
+                {/* <span>@用户昵称</span> */}
+                <span className='text-2xl font-bold'>{new Date().toISOString().slice(0, 10)}</span>
               </Md2PosterHeader>
               <Md2PosterContent>{markdown}</Md2PosterContent>
-              <Md2PosterFooter className='flex justify-center items-center gap-1'>
+              {/* <Md2PosterFooter className='flex justify-center items-center gap-1'>
                 <span>由 Markdown 转海报工具生成</span>
-              </Md2PosterFooter>
+              </Md2PosterFooter> */}
             </Md2Poster>
           </div>
         </div>
