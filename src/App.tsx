@@ -85,19 +85,7 @@ function App() {
       <main className="flex-grow flex flex-col md:flex-row p-4 gap-4">
         {/* 左侧编辑区 */}
         <div className="w-full md:w-1/2 flex flex-col gap-4">
-          <div className="bg-white p-4 rounded-lg shadow-md">
-            <h2 className="text-xl font-bold mb-4">编辑 Markdown</h2>
-            <div data-color-mode="light">
-              <MDEditor
-                height={400}
-                preview='edit'
-                value={markdown}
-                onChange={handleMarkdownChange}
-              />
-            </div>
-          </div>
-          
-          {/* 配置面板 */}
+          {/* 配置面板 - 已移至编辑区上方 */}
           <div className="bg-white p-4 rounded-lg shadow-md">
             <h2 className="text-xl font-bold mb-4">海报设置</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -141,53 +129,45 @@ function App() {
                 </div>
               </div>
             </div>
-            <div className="mt-4 flex gap-3">
-              <button 
-                onClick={handleCopy} 
-                className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md transition flex items-center"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
-                </svg>
-                复制为图片
-              </button>
-              <button 
-                onClick={handleDownload} 
-                className="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-md transition flex items-center"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                </svg>
-                下载图片
-              </button>
+          </div>
+          
+          {/* Markdown 编辑区 - 已移至配置面板下方 */}
+          <div className="bg-white p-4 rounded-lg shadow-md">
+            <h2 className="text-xl font-bold mb-4">编辑 Markdown</h2>
+            <div data-color-mode="light">
+              <MDEditor
+                height={400}
+                preview='edit'
+                value={markdown}
+                onChange={handleMarkdownChange}
+              />
             </div>
           </div>
         </div>
         
         {/* 右侧预览区 */}
-        <div className="w-full md:w-1/2 bg-white p-4 rounded-lg shadow-md">
+        <div className="w-full md:w-1/2 bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
           <h2 className="text-xl font-bold mb-4">海报预览</h2>
-          <div className="border border-gray-200 rounded-md p-2 overflow-auto max-h-[800px]">
-            <Md2Poster 
-              theme={theme}
-              size={size}
-              ref={markdownRef} 
-              copySuccessCallback={copySuccessCallback}
-              copyFailedCallback={copyFailedCallback}
-              downloadSuccessCallback={downloadSuccessCallback}
-              downloadFailedCallback={downloadFailedCallback}
-              canCopy
-              canDownload
-            >
-              <Md2PosterHeader className='flex justify-between items-center justify-center px-4 text-center'>
-                {/* <span>@用户昵称</span> */}
-                <span className='text-2xl font-bold'>{new Date().toISOString().slice(0, 10)}</span>
-              </Md2PosterHeader>
-              <Md2PosterContent>{markdown}</Md2PosterContent>
-              {/* <Md2PosterFooter className='flex justify-center items-center gap-1'>
-                <span>由 Markdown 转海报工具生成</span>
-              </Md2PosterFooter> */}
-            </Md2Poster>
+          <div className="border border-gray-200 rounded-md p-2 overflow-auto max-h-[800px] flex justify-center w-full">
+            <div className="flex justify-center w-full">
+              <Md2Poster 
+                theme={theme}
+                size={size}
+                ref={markdownRef} 
+                copySuccessCallback={copySuccessCallback}
+                copyFailedCallback={copyFailedCallback}
+                downloadSuccessCallback={downloadSuccessCallback}
+                downloadFailedCallback={downloadFailedCallback}
+                canCopy
+                canDownload
+                className="flex flex-col items-center text-center"
+              >
+                <Md2PosterHeader className='flex justify-center items-center w-full px-4 text-center'>
+                  <span className='text-2xl font-bold'>{new Date().toISOString().slice(0, 10)}</span>
+                </Md2PosterHeader>
+                <Md2PosterContent className="text-center mx-auto">{markdown}</Md2PosterContent>
+              </Md2Poster>
+            </div>
           </div>
         </div>
       </main>

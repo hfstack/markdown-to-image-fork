@@ -190,7 +190,7 @@ const Md2Poster = forwardRef<Md2PosterRef, Md2PosterProps>(
       return (
         canCopy && (
           <span className="py-2 inline-block mr-2">
-            <Button onClick={handleCopy} loading={loading}>
+            <Button onClick={handleCopy}  loading={loading}>
               copy
             </Button>
           </span>
@@ -212,16 +212,17 @@ const Md2Poster = forwardRef<Md2PosterRef, Md2PosterProps>(
 
     return (
       <div className="markdown-to-image-root">
+         <div className="flex">
+          {renderCopy()}
+          {renderDownload()}
+        </div>
         <div
           ref={mdRef}
           className={cn('w-full relative', themeClassName, aspectRatioClassName, className, sizeClassName)}
         >
           {children}
         </div>
-        <div className="flex">
-          {renderCopy()}
-          {renderDownload()}
-        </div>
+       
       </div>
     )
   }
