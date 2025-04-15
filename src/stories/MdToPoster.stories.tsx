@@ -1,5 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { Md2Poster, Md2PosterContent, Md2PosterHeader, Md2PosterFooter } from '../packages/index'
+import MDEditor from '@uiw/react-md-editor'
+import '@uiw/react-md-editor/markdown-editor.css';
+import '@uiw/react-markdown-preview/markdown.css';
 
 const DemoComponent = () => {
   const markdown = `
@@ -13,11 +16,23 @@ const DemoComponent = () => {
   * todo
   * done
   `
+  const handleMarkdownChange = (value?: string) => {
+    setMarkdown(value || "");
+  }
   return (
     <div>
       <Md2Poster theme="pink" canCopy>
         <Md2PosterHeader>test header</Md2PosterHeader>
-        <Md2PosterContent>{markdown}</Md2PosterContent>
+        <Md2PosterContent>
+          <div data-color-mode="light">
+            <MDEditor
+              height={400}
+              preview='edit'
+              value={markdown}
+              onChange={handleMarkdownChange}
+            />
+          </div>
+        </Md2PosterContent>
         <Md2PosterFooter>test footer</Md2PosterFooter>
       </Md2Poster>
     </div>

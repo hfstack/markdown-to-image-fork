@@ -24,13 +24,17 @@ interface Md2PosterProps {
   template?: ICardType
   aspectRatio?: IAspectRatioType
   canCopy?: boolean
+  canDownload?: boolean
   size?: ISizeType
   copySuccessCallback?: () => void
   copyFailedCallback?: () => void
+  downloadSuccessCallback?: () => void
+  downloadFailedCallback?: () => void
 }
 
 interface Md2PosterRef {
   handleCopy: () => Promise<unknown>
+  handleDownload: () => Promise<unknown>
 }
 
 const themeMapClassName = {
@@ -99,10 +103,13 @@ const Md2Poster = forwardRef<Md2PosterRef, Md2PosterProps>(
       theme = 'blue',
       className,
       canCopy,
+      canDownload,
       aspectRatio = 'auto',
       size = 'mobile',
       copySuccessCallback,
       copyFailedCallback,
+      downloadSuccessCallback,
+      downloadFailedCallback,
     }: Md2PosterProps,
     ref
   ) => {
@@ -110,8 +117,8 @@ const Md2Poster = forwardRef<Md2PosterRef, Md2PosterProps>(
     const themeClassName = themeMapClassName[theme]
     const mdRef = useRef<HTMLDivElement>(null)
     const [loading, setLoading] = useState(false)
+    const [downloadLoading, setDownloadLoading] = useState(false)
     const sizeClassName = size === 'mobile' ? 'max-w-lg p-6' : 'max-w-4xl p-16'
-
 
     const handleCopy = useCallback(async () => {
       return new Promise(async (resolve, reject) => {
@@ -140,18 +147,63 @@ const Md2Poster = forwardRef<Md2PosterRef, Md2PosterProps>(
           setLoading(false)
         }
       })
-    }, [mdRef])
+    }, [mdRef, copySuccessCallback, copyFailedCallback])
+
+    const handleDownload = useCallback(async () => {
+      return new Promise(async (resolve, reject) => {
+        const element = mdRef.current
+        if (element === null) {
+          return
+        }
+        setDownloadLoading(true)
+        await sleep(100)
+        try {
+          const blob = (await domToBlob(element)) as Blob
+          const url = URL.createObjectURL(blob)
+          const link = document.createElement('a')
+          link.href = url
+          link.download = `markdown-poster-${new Date().getTime()}.png`
+          document.body.appendChild(link)
+          link.click()
+          document.body.removeChild(link)
+          URL.revokeObjectURL(url)
+          
+          downloadSuccessCallback?.()
+          resolve(blob)
+          console.log('Image downloaded successfully:', blob)
+        } catch (error) {
+          downloadFailedCallback?.()
+          reject(error)
+          console.error('Failed to download image:', error)
+        } finally {
+          setDownloadLoading(false)
+        }
+      })
+    }, [mdRef, downloadSuccessCallback, downloadFailedCallback])
 
     useImperativeHandle(ref, () => ({
       handleCopy,
+      handleDownload
     }))
 
     const renderCopy = () => {
       return (
         canCopy && (
-          <span className="py-2 inline-block">
+          <span className="py-2 inline-block mr-2">
             <Button onClick={handleCopy} loading={loading}>
               copy
+            </Button>
+          </span>
+        )
+      )
+    }
+
+    const renderDownload = () => {
+      return (
+        canDownload && (
+          <span className="py-2 inline-block">
+            <Button onClick={handleDownload} loading={downloadLoading}>
+              download
             </Button>
           </span>
         )
@@ -166,12 +218,15 @@ const Md2Poster = forwardRef<Md2PosterRef, Md2PosterProps>(
         >
           {children}
         </div>
-        {renderCopy()}
+        <div className="flex">
+          {renderCopy()}
+          {renderDownload()}
+        </div>
       </div>
     )
   }
 )
 
-export type { Md2PosterProps }
+export type { Md2PosterProps, Md2PosterRef }
 
 export default Md2Poster
