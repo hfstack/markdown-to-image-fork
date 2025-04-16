@@ -191,7 +191,7 @@ const Md2Poster = forwardRef<Md2PosterRef, Md2PosterProps>(
         canCopy && (
           <span className="py-2 inline-block mr-2">
             <Button onClick={handleCopy}  loading={loading}>
-              copy
+              复制
             </Button>
           </span>
         )
@@ -203,7 +203,7 @@ const Md2Poster = forwardRef<Md2PosterRef, Md2PosterProps>(
         canDownload && (
           <span className="py-2 inline-block">
             <Button onClick={handleDownload} loading={downloadLoading}>
-              download
+              下载
             </Button>
           </span>
         )

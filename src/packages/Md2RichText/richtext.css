@@ -1,0 +1,271 @@
+/* 富文本基本样式 */
+.rich-text-output {
+  font-family: var(--font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif);
+  line-height: 1.6;
+  color: var(--text-color, #333);
+  background-color: var(--bg-color, white);
+  padding: 16px;
+}
+
+/* 标题样式 */
+.rich-text-output h1,
+.rich-text-output h2,
+.rich-text-output h3,
+.rich-text-output h4,
+.rich-text-output h5,
+.rich-text-output h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.rich-text-output h1 {
+  font-size: 2em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border-color, #eaecef);
+}
+
+.rich-text-output h2 {
+  font-size: 1.5em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border-color, #eaecef);
+}
+
+.rich-text-output h3 {
+  font-size: 1.25em;
+}
+
+.rich-text-output h4 {
+  font-size: 1em;
+}
+
+.rich-text-output h5 {
+  font-size: 0.875em;
+}
+
+.rich-text-output h6 {
+  font-size: 0.85em;
+  color: var(--secondary-text-color, #6a737d);
+}
+
+/* 段落和文本样式 */
+.rich-text-output p {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.rich-text-output strong {
+  font-weight: 600;
+}
+
+.rich-text-output em {
+  font-style: italic;
+}
+
+.rich-text-output del {
+  text-decoration: line-through;
+}
+
+/* 引用样式 */
+.rich-text-output blockquote {
+  padding: 0 1em;
+  color: var(--blockquote-text-color, #6a737d);
+  border-left: 0.25em solid var(--blockquote-border-color, #dfe2e5);
+  margin: 0 0 16px 0;
+}
+
+/* 列表样式 */
+.rich-text-output ul,
+.rich-text-output ol {
+  padding-left: 2em;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.rich-text-output li {
+  margin-top: 0.25em;
+}
+
+.rich-text-output li+li {
+  margin-top: 0.25em;
+}
+
+/* 代码样式 */
+.rich-text-output code {
+  padding: 0.2em 0.4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: var(--code-bg-color, rgba(27, 31, 35, 0.05));
+  border-radius: 3px;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+}
+
+.rich-text-output pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: var(--pre-bg-color, #f6f8fa);
+  border-radius: 3px;
+  margin-bottom: 16px;
+}
+
+.rich-text-output pre code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  background-color: transparent;
+  border: 0;
+}
+
+/* 表格样式 */
+.rich-text-output table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  margin-top: 0;
+  margin-bottom: 16px;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.rich-text-output table th {
+  font-weight: 600;
+}
+
+.rich-text-output table th,
+.rich-text-output table td {
+  padding: 6px 13px;
+  border: 1px solid var(--table-border-color, #dfe2e5);
+}
+
+.rich-text-output table tr {
+  background-color: var(--table-bg-color, #fff);
+  border-top: 1px solid var(--table-border-color, #c6cbd1);
+}
+
+.rich-text-output table tr:nth-child(2n) {
+  background-color: var(--table-alt-bg-color, #f6f8fa);
+}
+
+/* 链接和图片样式 */
+.rich-text-output a {
+  color: var(--link-color, #0366d6);
+  text-decoration: none;
+}
+
+.rich-text-output a:hover {
+  text-decoration: underline;
+}
+
+.rich-text-output img {
+  max-width: 100%;
+  box-sizing: content-box;
+  background-color: var(--img-bg-color, #fff);
+}
+
+/* 水平线样式 */
+.rich-text-output hr {
+  height: 0.25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: var(--hr-color, #e1e4e8);
+  border: 0;
+}
+
+/* 主题变量 */
+
+/* 默认明亮主题 */
+.rich-text-theme-light {
+  --bg-color: white;
+  --text-color: #333;
+  --secondary-text-color: #6a737d;
+  --border-color: #eaecef;
+  --blockquote-text-color: #6a737d;
+  --blockquote-border-color: #dfe2e5;
+  --code-bg-color: rgba(27, 31, 35, 0.05);
+  --pre-bg-color: #f6f8fa;
+  --table-border-color: #dfe2e5;
+  --table-bg-color: #fff;
+  --table-alt-bg-color: #f6f8fa;
+  --link-color: #0366d6;
+  --hr-color: #e1e4e8;
+}
+
+/* 深色主题 */
+.rich-text-theme-dark {
+  --bg-color: #1e1e1e;
+  --text-color: #e0e0e0;
+  --secondary-text-color: #aaa;
+  --border-color: #4a5568;
+  --blockquote-text-color: #a0aec0;
+  --blockquote-border-color: #4a5568;
+  --code-bg-color: rgba(255, 255, 255, 0.1);
+  --pre-bg-color: #2d2d2d;
+  --table-border-color: #4a5568;
+  --table-bg-color: transparent;
+  --table-alt-bg-color: rgba(0, 0, 0, 0.2);
+  --link-color: #63b3ed;
+  --hr-color: #4a5568;
+}
+
+/* 蓝色主题 */
+.rich-text-theme-blue {
+  --bg-color: #ebf8ff;
+  --text-color: #2b6cb0;
+  --secondary-text-color: #4299e1;
+  --border-color: #bee3f8;
+  --blockquote-text-color: #4299e1;
+  --blockquote-border-color: #90cdf4;
+  --code-bg-color: rgba(66, 153, 225, 0.1);
+  --pre-bg-color: #e1effe;
+  --table-border-color: #bee3f8;
+  --table-bg-color: #ebf8ff;
+  --table-alt-bg-color: #e1effe;
+  --link-color: #3182ce;
+  --hr-color: #bee3f8;
+}
+
+/* 绿色主题 */
+.rich-text-theme-green {
+  --bg-color: #f0fff4;
+  --text-color: #276749;
+  --secondary-text-color: #38a169;
+  --border-color: #c6f6d5;
+  --blockquote-text-color: #38a169;
+  --blockquote-border-color: #9ae6b4;
+  --code-bg-color: rgba(56, 161, 105, 0.1);
+  --pre-bg-color: #e6ffed;
+  --table-border-color: #c6f6d5;
+  --table-bg-color: #f0fff4;
+  --table-alt-bg-color: #e6ffed;
+  --link-color: #2f855a;
+  --hr-color: #c6f6d5;
+}
+
+/* 字体大小 */
+.rich-text-size-small {
+  font-size: 0.875rem;
+}
+
+.rich-text-size-medium {
+  font-size: 1rem;
+}
+
+.rich-text-size-large {
+  font-size: 1.125rem;
+}
+
+/* 字体族 */
+.rich-text-font-sans {
+  --font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.rich-text-font-serif {
+  --font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+.rich-text-font-mono {
+  --font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+} 

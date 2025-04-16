@@ -1,11 +1,11 @@
-import React, { useState, useRef } from 'react'
-import { Md2Poster, Md2PosterContent, Md2PosterHeader, Md2PosterFooter } from './packages'
+import * as React from 'react'
+import { Md2Poster, Md2PosterContent, Md2PosterHeader } from './packages'
 import MDEditor from '@uiw/react-md-editor';
 // import './App.css'
 
 function App() {
-  const markdownRef = useRef<any>(null);
-  const [markdown, setMarkdown] = useState(`# AI Morning News - April 29th
+  const markdownRef = React.useRef<any>(null);
+  const [markdown, setMarkdown] = React.useState(`# AI Morning News - April 29th
   ![image](https://imageio.forbes.com/specials-images/imageserve/64b5825a5b9b4d3225e9bd15/artificial-intelligence--ai/960x0.jpg?format=jpg&width=1440)
   1. **MetaElephant Company Releases Multi-Modal Large Model XVERSE-V**: Supports image input of any aspect ratio, performs well in multiple authoritative evaluations, and has been open-sourced.
   2. **Tongyi Qianwen Team Open-Sources Billion-Parameter Model Qwen1.5-110B**: Uses Transformer decoder architecture, supports multiple languages, and has an efficient attention mechanism.
@@ -17,13 +17,13 @@ function App() {
     `);
 
   // 修改类型定义，与Md2PosterProps兼容
-  const [theme, setTheme] = useState<any>('SpringGradientWave');
-  const [size, setSize] = useState<any>('mobile');
+  const [theme, setTheme] = React.useState<any>('SpringGradientWave');
+  const [size, setSize] = React.useState<any>('mobile');
   
   const handleCopy = () => {
     markdownRef?.current?.handleCopy().then(() => {
       alert('已成功复制到剪贴板');
-    }).catch((error) => {
+    }).catch((error: any) => {
       console.error('复制失败:', error);
       alert('复制失败，请稍后再试');
     });
@@ -32,7 +32,7 @@ function App() {
   const handleDownload = () => {
     markdownRef?.current?.handleDownload().then(() => {
       alert('已成功下载图片');
-    }).catch((error) => {
+    }).catch((error: any) => {
       console.error('下载失败:', error);
       alert('下载失败，请稍后再试');
     });
@@ -67,20 +67,6 @@ function App() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* 顶部导航栏 */}
-      <header className="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-4 shadow-md">
-        <div className="container mx-auto flex justify-between items-center">
-          <h1 className="text-2xl font-bold">Markdown 转海报工具</h1>
-          <nav>
-            <ul className="flex space-x-6">
-              <li><a href="#" className="hover:underline">首页</a></li>
-              <li><a href="#" className="hover:underline">文档</a></li>
-              <li><a href="#" className="hover:underline">关于</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
-
       {/* 主内容区 */}
       <main className="flex-grow flex flex-col md:flex-row p-4 gap-4">
         {/* 左侧编辑区 */}
