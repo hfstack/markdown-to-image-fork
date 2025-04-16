@@ -1,0 +1,36 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "switchLocale": "Switch to {locale}",
+    "md2richTxt": "Markdown to Rich Text"
+  },
+  "common": {
+    "welcome": "Welcome",
+    "markdownEditor": "Markdown Editor",
+    "preview": "Preview",
+    "posterSettings": "Poster Settings",
+    "theme": "Theme",
+    "size": "Size",
+    "mobile": "Mobile",
+    "desktop": "Desktop",
+    "editMarkdown": "Edit Markdown",
+    "posterPreview": "Poster Preview",
+    "markdownToRichText": "Markdown to Rich Text Tool",
+    "richTextSettings": "Rich Text Settings",
+    "fontSize": "Font Size",
+    "fontFamily": "Font Family",
+    "styledHtmlCode": "Styled HTML Code",
+    "richTextPreview": "Rich Text Preview",
+    "light": "Light",
+    "dark": "Dark",
+    "blue": "Blue",
+    "green": "Green",
+    "small": "Small",
+    "medium": "Medium",
+    "large": "Large",
+    "default": "Default",
+    "serif": "Serif",
+    "monospace": "Monospace"
+  }
+} 

@@ -1,0 +1,36 @@
+{
+  "navigation": {
+    "home": "首页",
+    "about": "关于",
+    "switchLocale": "切换到{locale}",
+    "md2richTxt": "Markdown转富文本"
+  },
+  "common": {
+    "welcome": "欢迎",
+    "markdownEditor": "Markdown编辑器",
+    "preview": "预览",
+    "posterSettings": "海报设置",
+    "theme": "主题",
+    "size": "尺寸",
+    "mobile": "移动端",
+    "desktop": "桌面端",
+    "editMarkdown": "编辑 Markdown",
+    "posterPreview": "海报预览",
+    "markdownToRichText": "Markdown 转富文本工具",
+    "richTextSettings": "富文本设置",
+    "fontSize": "字体大小",
+    "fontFamily": "字体类型",
+    "styledHtmlCode": "带样式的HTML代码",
+    "richTextPreview": "富文本预览",
+    "light": "明亮",
+    "dark": "深色",
+    "blue": "蓝色",
+    "green": "绿色",
+    "small": "小",
+    "medium": "中",
+    "large": "大",
+    "default": "默认",
+    "serif": "衬线字体",
+    "monospace": "等宽字体"
+  }
+} 
