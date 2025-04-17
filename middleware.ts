@@ -1,10 +1,10 @@
 import createMiddleware from 'next-intl/middleware';
 import { NextRequest, NextResponse } from 'next/server';
 import { SUPPORTED_LOCALES } from './src/components/generateMetadata';
-import config from './src/i18n/config';
+import { default as i18nConfig } from './src/i18n/config';
 
 // 确保使用相同的语言配置
-if (JSON.stringify(SUPPORTED_LOCALES) !== JSON.stringify(config.locales)) {
+if (JSON.stringify(SUPPORTED_LOCALES) !== JSON.stringify(i18nConfig.locales)) {
   console.warn('Warning: SUPPORTED_LOCALES in generateMetadata.ts differs from locales in i18n/config.ts');
 }
 
@@ -57,4 +57,4 @@ function getPreferredLocale(acceptLanguage: string): string {
 export const config = {
   // 匹配需要中间件处理的路径
   matcher: ['/((?!api|_next|.*\\..*).*)'],
-}; 
+};

@@ -1,10 +1,9 @@
-# 允许所有爬虫
+# *
 User-agent: *
 Allow: /
 
-# 禁止爬虫访问的目录示例
-# Disallow: /private/
-# Disallow: /admin/
+# Host
+Host: https://readpo.com
 
-# 站点地图路径
-Sitemap: https://yourwebsite.com/sitemap.xml 
+# Sitemaps
+Sitemap: https://readpo.com/sitemap.xml
