@@ -4,9 +4,11 @@ import * as React from 'react'
 import { Md2Poster, Md2PosterContent, Md2PosterHeader } from '../packages'
 import MDEditor from '@uiw/react-md-editor'
 import { useTranslations } from 'next-intl'
+import toast, { Toaster } from 'react-hot-toast'
 
 function App() {
   const t = useTranslations('common')
+  const md2postT = useTranslations('md2post')
   const markdownRef = React.useRef<any>(null)
   const [markdown, setMarkdown] = React.useState(`# AI Morning News - April 29th
   ![image](https://imageio.forbes.com/specials-images/imageserve/64b5825a5b9b4d3225e9bd15/artificial-intelligence--ai/960x0.jpg?format=jpg&width=1440)
@@ -41,19 +43,31 @@ function App() {
   }
   
   const copySuccessCallback = () => {
-    console.log('复制成功')
+    toast.success(md2postT('copySuccess'), {
+      duration: 2000,
+      position: 'top-center',
+    })
   }
   
   const copyFailedCallback = () => {
-    console.error('复制失败')
+    toast.error(md2postT('copyFailed'), {
+      duration: 3000,
+      position: 'top-center',
+    })
   }
   
   const downloadSuccessCallback = () => {
-    console.log('下载成功')
+    toast.success(md2postT('downloadSuccess'), {
+      duration: 2000,
+      position: 'top-center',
+    })
   }
   
   const downloadFailedCallback = () => {
-    console.error('下载失败')
+    toast.error(md2postT('downloadFailed'), {
+      duration: 3000,
+      position: 'top-center',
+    })
   }
 
   const handleMarkdownChange = (value?: string) => {
@@ -68,6 +82,7 @@ function App() {
 
   return (
     <div className="flex flex-col min-h-screen">
+      <Toaster />
       <main className="flex-grow flex flex-col md:flex-row p-4 gap-4">
         <div className="w-full md:w-1/2 flex flex-col gap-4">
           <div className="bg-white p-4 rounded-lg shadow-md">

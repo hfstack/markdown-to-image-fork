@@ -1,6 +1,8 @@
 import { ReactNode, useRef, useState, useCallback, forwardRef, useImperativeHandle } from 'react'
 import { cn } from '../../lib/utils'
 import { domToBlob } from 'modern-screenshot'
+import { useTranslations } from 'next-intl'
+
 type ICardType = 'QuoteCard' | 'NewsDigest'
 type IThemeType =
   //gradient
@@ -113,6 +115,7 @@ const Md2Poster = forwardRef<Md2PosterRef, Md2PosterProps>(
     }: Md2PosterProps,
     ref
   ) => {
+    const t = useTranslations('md2post')
     const aspectRatioClassName = aspectRatioMapClassName[aspectRatio]
     const themeClassName = themeMapClassName[theme]
     const mdRef = useRef<HTMLDivElement>(null)
@@ -191,7 +194,7 @@ const Md2Poster = forwardRef<Md2PosterRef, Md2PosterProps>(
         canCopy && (
           <span className="py-2 inline-block mr-2">
             <Button onClick={handleCopy}  loading={loading}>
-              复制
+              {t('copy')}
             </Button>
           </span>
         )
@@ -203,7 +206,7 @@ const Md2Poster = forwardRef<Md2PosterRef, Md2PosterProps>(
         canDownload && (
           <span className="py-2 inline-block">
             <Button onClick={handleDownload} loading={downloadLoading}>
-              下载
+              {t('download')}
             </Button>
           </span>
         )
@@ -212,7 +215,7 @@ const Md2Poster = forwardRef<Md2PosterRef, Md2PosterProps>(
 
     return (
       <div className="markdown-to-image-root">
-         <div className="flex">
+        <div className="flex gap-2 justify-end p-4">
           {renderCopy()}
           {renderDownload()}
         </div>
@@ -222,7 +225,6 @@ const Md2Poster = forwardRef<Md2PosterRef, Md2PosterProps>(
         >
           {children}
         </div>
-       
       </div>
     )
   }

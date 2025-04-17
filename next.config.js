@@ -16,7 +16,7 @@ const nextConfig = {
     return [
       {
         source: '/',
-        destination: '/zh',
+        destination: '/en',
         permanent: false,
       },
     ];

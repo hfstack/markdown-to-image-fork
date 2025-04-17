@@ -32,5 +32,15 @@
     "default": "默认",
     "serif": "衬线字体",
     "monospace": "等宽字体"
+  },
+  "md2post": {
+    "title": "Markdown 转海报",
+    "download": "下载图片",
+    "copy": "复制到剪贴板",
+    "placeholder": "在此输入 Markdown 内容...",
+    "copySuccess": "已成功复制到剪贴板！",
+    "copyFailed": "复制到剪贴板失败",
+    "downloadSuccess": "下载成功！",
+    "downloadFailed": "下载失败"
   }
 } 

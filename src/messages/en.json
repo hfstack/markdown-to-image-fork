@@ -32,5 +32,15 @@
     "default": "Default",
     "serif": "Serif",
     "monospace": "Monospace"
+  },
+  "md2post": {
+    "title": "Markdown to Poster",
+    "download": "Download",
+    "copy": "Copy to Clipboard",
+    "placeholder": "Input your markdown here...",
+    "copySuccess": "Copied to clipboard successfully!",
+    "copyFailed": "Failed to copy to clipboard",
+    "downloadSuccess": "Downloaded successfully!",
+    "downloadFailed": "Failed to download"
   }
 } 
