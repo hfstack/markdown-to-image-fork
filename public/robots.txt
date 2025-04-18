@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://readpo.com
+Host: https://md2poster.com
 
 # Sitemaps
-Sitemap: https://readpo.com/sitemap.xml
+Sitemap: https://md2poster.com/sitemap.xml

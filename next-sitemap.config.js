@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://readpo.com',
+  siteUrl: 'https://md2poster.com',
   generateRobotsTxt: true,
   robotsTxtOptions: {
     policies: [
@@ -16,31 +16,31 @@ module.exports = {
   // 支持的语言
   alternateRefs: [
     {
-      href: 'https://readpo.com/en',
+      href: 'https://md2poster.com/en',
       hreflang: 'en',
     },
     {
-      href: 'https://readpo.com/zh',
+      href: 'https://md2poster.com/zh',
       hreflang: 'zh',
     },
     {
-      href: 'https://readpo.com/fr',
+      href: 'https://md2poster.com/fr',
       hreflang: 'fr',
     },
     {
-      href: 'https://readpo.com/es',
+      href: 'https://md2poster.com/es',
       hreflang: 'es',
     },
     {
-      href: 'https://readpo.com/ja',
+      href: 'https://md2poster.com/ja',
       hreflang: 'ja',
     },
     {
-      href: 'https://readpo.com/ko',
+      href: 'https://md2poster.com/ko',
       hreflang: 'ko',
     },
     {
-      href: 'https://readpo.com/en',
+      href: 'https://md2poster.com/en',
       hreflang: 'x-default',
     },
   ],
