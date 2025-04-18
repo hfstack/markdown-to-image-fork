@@ -42,20 +42,35 @@ export default async function LocaleLayout({
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {/* Google Analytics 跟踪代码 */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7HM6X6VQR5"></script>
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-7HM6X6VQR5');
+          `
+        }} />
       </head>
       <body className={inter.className}>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <header className="p-4 bg-gray-100">
-            <div className="container mx-auto">
-              <div className="flex justify-between items-center">
-                <Navigation />
+          <div className="min-h-screen flex flex-col">
+            <nav className="navbar bg-base-100">
+              <Navigation />
+              <div className="navbar-end">
                 <LanguageSwitcher />
               </div>
-            </div>
-          </header>
-          <main className="container mx-auto px-4 py-8">
-            {children}
-          </main>
+            </nav>
+            <main className="flex-grow">
+              {children}
+            </main>
+            <footer className="footer p-10 bg-neutral text-neutral-content">
+              <div>
+                <p>Copyright © 2023 - All right reserved</p>
+              </div>
+            </footer>
+          </div>
         </NextIntlClientProvider>
       </body>
     </html>
