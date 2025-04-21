@@ -12,7 +12,7 @@
     "tailwindcss",
     "typescript"
   ],
-  "homepage": "https://readpo.com/poster",
+  "homepage": "https://md2poster.com",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gcui-art/markdown-to-image.git"
@@ -35,10 +35,11 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && npm run postbuild",
+    "postbuild": "next-sitemap --config next-sitemap.config.js",
     "start": "next start",
     "lint": "next lint",
-    "postbuild": "next-sitemap"
+    "prepare": "husky install"
   },
   "peerDependencies": {
     "react": "^18.2.0",
