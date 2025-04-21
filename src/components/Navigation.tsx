@@ -3,6 +3,7 @@
 import { Link, usePathname } from '../i18n/routing'
 import { useTranslations, useLocale } from 'next-intl'
 import { useEffect } from 'react'
+import LanguageSwitcher from './LanguageSwitcher'
 
 export default function Navigation() {
   const t = useTranslations('navigation')
@@ -16,15 +17,20 @@ export default function Navigation() {
   }, [locale, t]);
   
   return (
-    <nav>
-      <ul className="flex gap-4">
-        <li>
-          <Link href="/" locale={locale}>{t('home')}</Link>
-        </li>
-        <li>
-          <Link href="/md2richTxt" locale={locale}>{t('md2richTxt')}</Link>
-        </li>
-      </ul>
-    </nav>
+    <div className="w-full flex items-center justify-between">
+      <nav>
+        <ul className="flex gap-4">
+          <li className="hover:text-primary transition-colors">
+            <Link href="/" locale={locale}>{t('home')}</Link>
+          </li>
+          <li className="hover:text-primary transition-colors">
+            <Link href="/md2richTxt" locale={locale}>{t('md2richTxt')}</Link>
+          </li>
+        </ul>
+      </nav>
+      <div className="flex-shrink-0">
+        <LanguageSwitcher />
+      </div>
+    </div>
   )
 } 

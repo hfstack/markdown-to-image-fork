@@ -23,13 +23,17 @@ export default function LanguageSwitcher() {
   console.log('Current pathname:', pathname);
   
   return (
-    <div className="flex flex-wrap gap-4">
+    <div className="flex items-center space-x-2">
       {SUPPORTED_LOCALES.map((lang) => (
         <Link 
           key={lang}
           href={pathname} 
           locale={lang} 
-          className={`transition-colors hover:text-blue-600 ${locale === lang ? 'font-bold text-blue-500' : ''}`}
+          className={`text-sm px-2 py-1 rounded transition-colors hover:bg-blue-100 hover:text-blue-600 ${
+            locale === lang 
+              ? 'font-bold text-blue-500 bg-blue-50' 
+              : 'text-gray-600'
+          }`}
         >
           {LOCALE_NAMES[lang]}
         </Link>

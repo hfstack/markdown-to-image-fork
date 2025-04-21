@@ -3,7 +3,6 @@ import { Inter } from 'next/font/google'
 import { notFound } from 'next/navigation'
 import { NextIntlClientProvider } from 'next-intl'
 import type { Metadata } from 'next'
-import LanguageSwitcher from '@/src/components/LanguageSwitcher'
 import Navigation from '@/src/components/Navigation'
 import '@/src/packages/index.css'
 
@@ -56,12 +55,11 @@ export default async function LocaleLayout({
       <body className={inter.className}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <div className="min-h-screen flex flex-col">
-            <nav className="navbar bg-base-100">
-              <Navigation />
-              <div className="navbar-end">
-                <LanguageSwitcher />
+            <header className="px-4 py-2 border-b shadow-sm">
+              <div className="container mx-auto">
+                <Navigation />
               </div>
-            </nav>
+            </header>
             <main className="flex-grow">
               {children}
             </main>
