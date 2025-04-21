@@ -38,8 +38,7 @@
     "build": "next build && npm run postbuild",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
     "start": "next start",
-    "lint": "next lint",
-    "prepare": "husky install"
+    "lint": "next lint"
   },
   "peerDependencies": {
     "react": "^18.2.0",
