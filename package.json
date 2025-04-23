@@ -12,7 +12,7 @@
     "tailwindcss",
     "typescript"
   ],
-  "homepage": "https://md2poster.com",
+  "homepage": "https://www.md2poster.com",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gcui-art/markdown-to-image.git"

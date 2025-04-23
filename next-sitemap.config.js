@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://md2poster.com',
+  siteUrl: 'https://www.md2poster.com',
   generateRobotsTxt: true,
   robotsTxtOptions: {
     policies: [
@@ -16,31 +16,31 @@ module.exports = {
   // 支持的语言
   alternateRefs: [
     {
-      href: 'https://md2poster.com/en',
+      href: 'https://www.md2poster.com/en',
       hreflang: 'en',
     },
     {
-      href: 'https://md2poster.com/zh',
+      href: 'https://www.md2poster.com/zh',
       hreflang: 'zh',
     },
     {
-      href: 'https://md2poster.com/fr',
+      href: 'https://www.md2poster.com/fr',
       hreflang: 'fr',
     },
     {
-      href: 'https://md2poster.com/es',
+      href: 'https://www.md2poster.com/es',
       hreflang: 'es',
     },
     {
-      href: 'https://md2poster.com/ja',
+      href: 'https://www.md2poster.com/ja',
       hreflang: 'ja',
     },
     {
-      href: 'https://md2poster.com/ko',
+      href: 'https://www.md2poster.com/ko',
       hreflang: 'ko',
     },
     {
-      href: 'https://md2poster.com/en',
+      href: 'https://www.md2poster.com/en',
       hreflang: 'x-default',
     },
   ],
@@ -64,13 +64,13 @@ module.exports = {
       changefreq: 'weekly',
       lastmod: new Date().toISOString(),
       alternateRefs: [
-        { href: 'https://md2poster.com/en/md2richTxt', hreflang: 'en' },
-        { href: 'https://md2poster.com/zh/md2richTxt', hreflang: 'zh' },
-        { href: 'https://md2poster.com/fr/md2richTxt', hreflang: 'fr' },
-        { href: 'https://md2poster.com/es/md2richTxt', hreflang: 'es' },
-        { href: 'https://md2poster.com/ja/md2richTxt', hreflang: 'ja' },
-        { href: 'https://md2poster.com/ko/md2richTxt', hreflang: 'ko' },
-        { href: 'https://md2poster.com/en/md2richTxt', hreflang: 'x-default' },
+        { href: 'https://www.md2poster.com/en/md2richTxt', hreflang: 'en' },
+        { href: 'https://www.md2poster.com/zh/md2richTxt', hreflang: 'zh' },
+        { href: 'https://www.md2poster.com/fr/md2richTxt', hreflang: 'fr' },
+        { href: 'https://www.md2poster.com/es/md2richTxt', hreflang: 'es' },
+        { href: 'https://www.md2poster.com/ja/md2richTxt', hreflang: 'ja' },
+        { href: 'https://www.md2poster.com/ko/md2richTxt', hreflang: 'ko' },
+        { href: 'https://www.md2poster.com/en/md2richTxt', hreflang: 'x-default' },
       ],
     });
     
