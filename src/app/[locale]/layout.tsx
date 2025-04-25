@@ -59,15 +59,15 @@ export default async function LocaleLayout({
         <NextIntlClientProvider locale={locale} messages={messages}>
           <div className="min-h-screen flex flex-col">
             <header className="px-4 py-2 border-b shadow-sm">
-              <div className="container mx-auto">
+              <div className="container mx-auto px-4 sm:px-6">
                 <Navigation />
               </div>
             </header>
-            <main className="flex-grow">
+            <main className="flex-grow md:px-4 px-0 sm:px-6 py-4">
               {children}
             </main>
-            <footer className="footer p-10 bg-neutral text-neutral-content">
-              <div>
+            <footer className="footer p-4 sm:p-10 bg-neutral text-neutral-content">
+              <div className="text-center sm:text-left">
                 <p>Copyright © 2025 - All right reserved</p>
               </div>
             </footer>
@@ -77,4 +77,4 @@ export default async function LocaleLayout({
       </body>
     </html>
   )
-} 
+}

@@ -83,9 +83,9 @@ function App() {
   return (
     <div className="flex flex-col min-h-screen">
       <Toaster />
-      <main className="flex-grow flex flex-col md:flex-row p-4 gap-4">
+      <main className="flex-grow flex flex-col md:flex-row  md:p-4 p-2 gap-4">
         <div className="w-full md:w-1/2 flex flex-col gap-4">
-          <div className="bg-white p-4 rounded-lg shadow-md">
+          <div className="bg-white md:p-4 p-2 rounded-lg shadow-md">
             <h2 className="text-xl font-bold mb-4">{t('posterSettings')}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
@@ -130,7 +130,7 @@ function App() {
             </div>
           </div>
           
-          <div className="bg-white p-4 rounded-lg shadow-md">
+          <div className="bg-white md:p-4 p-2 rounded-lg shadow-md">
             <h2 className="text-xl font-bold mb-4">{t('editMarkdown')}</h2>
             <div data-color-mode="light">
               <MDEditor
@@ -143,9 +143,9 @@ function App() {
           </div>
         </div>
         
-        <div className="w-full md:w-1/2 bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
+        <div className="w-full md:w-1/2 bg-white md:p-4 p-0 rounded-lg shadow-md flex flex-col items-center">
           <h2 className="text-xl font-bold mb-4">{t('posterPreview')}</h2>
-          <div className="border border-gray-200 rounded-md p-2 overflow-auto max-h-[800px] flex justify-center w-full">
+          <div className="border border-gray-200 rounded-md p-1 overflow-auto max-h-[800px] flex justify-center w-full">
             <div className="flex justify-center w-full">
               <Md2Poster 
                 theme={theme}
@@ -162,7 +162,7 @@ function App() {
                 <Md2PosterHeader className='flex justify-center items-center w-full px-4 text-center'>
                   <span className='text-2xl font-bold'>{new Date().toISOString().slice(0, 10)}</span>
                 </Md2PosterHeader>
-                <Md2PosterContent className="mx-auto">{markdown}</Md2PosterContent>
+                <Md2PosterContent className="mx-auto px-2">{markdown}</Md2PosterContent>
               </Md2Poster>
             </div>
           </div>
@@ -172,4 +172,4 @@ function App() {
   )
 }
 
-export default App 
+export default App
