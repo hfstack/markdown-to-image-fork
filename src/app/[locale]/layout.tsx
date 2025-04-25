@@ -52,6 +52,7 @@ export default async function LocaleLayout({
             gtag('config', 'G-7HM6X6VQR5');
           `
         }} />
+        <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "cb2d46bf156c48d780af91e3369a7eab"}'></script>
       </head>
       <body className={inter.className}>
         <NextIntlClientProvider locale={locale} messages={messages}>
@@ -66,7 +67,7 @@ export default async function LocaleLayout({
             </main>
             <footer className="footer p-10 bg-neutral text-neutral-content">
               <div>
-                <p>Copyright © 2023 - All right reserved</p>
+                <p>Copyright © 2025 - All right reserved</p>
               </div>
             </footer>
           </div>
