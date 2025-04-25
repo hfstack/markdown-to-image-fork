@@ -58,21 +58,22 @@
   "dependencies": {
     "@tailwindcss/typography": "^0.5.12",
     "@uiw/react-md-editor": "^4.0.5",
+    "@vercel/analytics": "^1.5.0",
     "autoprefixer": "^10.4.14",
     "clsx": "^2.1.1",
     "lucide-react": "^0.468.0",
     "modern-screenshot": "^4.4.39",
     "next": "^14.1.0",
     "next-intl": "^3.5.4",
+    "next-sitemap": "^4.2.3",
     "postcss": "^8.4.24",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.1",
     "react-markdown": "^9.0.1",
     "rehype-raw": "^7.0.0",
     "remark-gfm": "^4.0.0",
     "tailwind-merge": "^2.3.0",
-    "tailwindcss": "^3.3.0",
-    "react-hot-toast": "^2.4.1",
-    "next-sitemap": "^4.2.3"
+    "tailwindcss": "^3.3.0"
   }
 }

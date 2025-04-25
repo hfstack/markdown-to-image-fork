@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation'
 import { NextIntlClientProvider } from 'next-intl'
 import type { Metadata } from 'next'
 import Navigation from '@/src/components/Navigation'
+import { Analytics } from '@vercel/analytics/next';
 import '@/src/packages/index.css'
 
 import '../globals.css'
@@ -72,6 +73,7 @@ export default async function LocaleLayout({
             </footer>
           </div>
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   )
