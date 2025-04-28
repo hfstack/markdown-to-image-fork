@@ -11,16 +11,6 @@ const nextConfig = {
     // 这里添加任何需要的 webpack 配置
     return config
   },
-  // 添加重定向规则，将根路径重定向到默认语言
-  redirects: async () => {
-    return [
-      {
-        source: '/',
-        destination: '/en',
-        permanent: false,
-      },
-    ];
-  },
 }
 
 module.exports = withNextIntl(nextConfig); 

@@ -1,7 +1,7 @@
 import createMiddleware from 'next-intl/middleware';
 import { NextRequest, NextResponse } from 'next/server';
-import { SUPPORTED_LOCALES } from './src/components/generateMetadata';
-import { default as i18nConfig } from './src/i18n/config';
+import { SUPPORTED_LOCALES } from './components/generateMetadata';
+import { default as i18nConfig } from './i18n/config';
 
 // 确保使用相同的语言配置
 if (JSON.stringify(SUPPORTED_LOCALES) !== JSON.stringify(i18nConfig.locales)) {
@@ -21,20 +21,24 @@ const intlMiddleware = createMiddleware({
 });
 
 export default function middleware(request: NextRequest) {
-  // 处理根路径重定向
+  
   const pathname = request.nextUrl.pathname;
   
   if (pathname === '/') {
-    // 根据Accept-Language头检测用户首选语言
-    const acceptLanguage = request.headers.get('accept-language') || '';
+    console.log('Handling root path redirect');
+    const acceptLanguage = request.headers.get('accept-language');
     const preferredLocale = getPreferredLocale(acceptLanguage);
     
     // 重定向到用户首选语言或默认语言
     return NextResponse.redirect(new URL(`/${preferredLocale}`, request.url));
   }
   
-  // 对其他路径使用next-intl中间件
-  return intlMiddleware(request);
+  // 确保其他路径也经过国际化处理
+  const response = intlMiddleware(request);
+  
+  // 添加调试日志
+  
+  return response;
 }
 
 // 从Accept-Language头解析用户首选语言
@@ -55,6 +59,8 @@ function getPreferredLocale(acceptLanguage: string): string {
 }
 
 export const config = {
-  // 匹配需要中间件处理的路径
-  matcher: ['/((?!api|_next|.*\\..*).*)'],
+  matcher: [
+    '/',
+    '/((?!api|_next/static|_next/image|favicon.ico|.*\\..*).*)'
+  ]
 };
