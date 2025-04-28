@@ -26,7 +26,7 @@ export default function middleware(request: NextRequest) {
   
   if (pathname === '/') {
     console.log('Handling root path redirect');
-    const acceptLanguage = request.headers.get('accept-language');
+    const acceptLanguage = request.headers.get('accept-language') || 'en';
     const preferredLocale = getPreferredLocale(acceptLanguage);
     
     // 重定向到用户首选语言或默认语言
