@@ -51,7 +51,7 @@ interface GenerateMetadataParams {
 }
 
 // 网站域名
-const siteUrl = 'https://readpo.com';
+const siteUrl = 'https://www.md2poster.com';
 
 export function generateMetadata({
   locale,
