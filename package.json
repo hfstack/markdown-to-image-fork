@@ -36,7 +36,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && npm run postbuild",
-    "postbuild": "next-sitemap --config next-sitemap.config.js",
+    "postbuild": "next-sitemap --config next-sitemap.config.js && node fix-sitemap.js",
     "start": "next start",
     "lint": "next lint"
   },
