@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation'
 import { NextIntlClientProvider } from 'next-intl'
 import type { Metadata } from 'next'
 import Navigation from '@/src/components/Navigation'
+import { FlatLanguageSwitcher } from '@/src/components/LanguageSwitcher'
 import { Analytics } from '@vercel/analytics/next';
 import '@/src/packages/index.css'
 
@@ -67,8 +68,11 @@ export default async function LocaleLayout({
               {children}
             </main>
             <footer className="footer p-4 sm:p-10 bg-neutral text-neutral-content">
-              <div className="text-center sm:text-left">
-                <p>Copyright © 2025 - All right reserved</p>
+              <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center">
+                <div className="text-center sm:text-left mb-4 sm:mb-0">
+                  <p>Copyright © 2025 - All right reserved</p>
+                </div>
+                <FlatLanguageSwitcher />
               </div>
             </footer>
           </div>
