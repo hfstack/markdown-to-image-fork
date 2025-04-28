@@ -3,7 +3,8 @@
     "home": "Markdownからポスターへ",
     "about": "概要",
     "switchLocale": "{locale}に切り替える",
-    "md2richTxt": "Markdownからリッチテキストへ"
+    "md2richTxt": "Markdownからリッチテキストへ",
+    "md2pdf": "MarkdownからPDF"
   },
   "common": {
     "welcome": "ようこそ",
@@ -74,5 +75,43 @@
     "preview": "リッチテキストプレビュー",
     "previewDescription": "上にリッチテキストのレンダリングが表示されています。「リッチテキストをコピー」をクリックして、このコンテンツをリッチテキストとしてコピーします",
     "copyRichText": "リッチテキストをコピー"
+  },
+  "md2pdf": {
+    "title": "MarkdownからPDFコンバーター",
+    "settings": "PDF設定",
+    "theme": "テーマ",
+    "light": "ライト",
+    "dark": "ダーク",
+    "blue": "ブルー",
+    "green": "グリーン",
+    "fontSize": "フォントサイズ",
+    "small": "小",
+    "medium": "中",
+    "large": "大",
+    "fontFamily": "フォント",
+    "default": "デフォルト（サンセリフ）",
+    "serif": "セリフ",
+    "mono": "等幅",
+    "pageSize": "ページサイズ",
+    "letter": "レター",
+    "legal": "リーガル",
+    "filename": "ファイル名",
+    "filenameHint": "拡張子なしでファイル名を入力",
+    "generatePdf": "PDF生成",
+    "generating": "PDF生成中...",
+    "editMarkdown": "Markdownを編集",
+    "preview": "PDFプレビュー",
+    "previewDescription": "PDFはこのように表示されます",
+    "emptyMarkdownWarning": "Markdownの内容は空にできません",
+    "pdfGenerationError": "PDFの生成中にエラーが発生しました。もう一度お試しください。",
+    "instructions": "使用方法",
+    "instruction1": "エディタでMarkdown内容を編集",
+    "instruction2": "上記の設定で外観をカスタマイズ",
+    "instruction3": "プレビューでドキュメントの表示を確認",
+    "instruction4": "ファイル名を入力（.pdf拡張子なし）",
+    "instruction5": "「PDF生成」をクリックしてドキュメントをダウンロード",
+    "pdfNote": "レンダリングの違いにより、最終的なPDFはプレビューと若干異なる場合があります。",
+    "pageSetupNote": "ページ設定：",
+    "pageSetupNoteDesc": "選択したページサイズに従ってドキュメントがフォーマットされます。"
   }
 }

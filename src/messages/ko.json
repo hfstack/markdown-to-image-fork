@@ -3,7 +3,8 @@
     "home": "Markdown에서 포스터로",
     "about": "소개",
     "switchLocale": "{locale}(으)로 전환",
-    "md2richTxt": "Markdown에서 서식 있는 텍스트로"
+    "md2richTxt": "Markdown에서 서식 있는 텍스트로",
+    "md2pdf": "Markdown에서 PDF로"
   },
   "common": {
     "welcome": "환영합니다",
@@ -74,5 +75,43 @@
     "preview": "서식 있는 텍스트 미리보기",
     "previewDescription": "위에 서식 있는 텍스트 렌더링이 표시됩니다. \"서식 있는 텍스트 복사\"를 클릭하여 이 내용을 서식 있는 텍스트로 복사하세요",
     "copyRichText": "서식 있는 텍스트 복사"
+  },
+  "md2pdf": {
+    "title": "Markdown에서 PDF 변환기",
+    "settings": "PDF 설정",
+    "theme": "테마",
+    "light": "밝음",
+    "dark": "어두움",
+    "blue": "파랑",
+    "green": "초록",
+    "fontSize": "글꼴 크기",
+    "small": "작게",
+    "medium": "중간",
+    "large": "크게",
+    "fontFamily": "글꼴",
+    "default": "기본 (산세리프)",
+    "serif": "세리프",
+    "mono": "고정폭",
+    "pageSize": "페이지 크기",
+    "letter": "레터",
+    "legal": "리걸",
+    "filename": "파일명",
+    "filenameHint": "확장자 없이 파일명 입력",
+    "generatePdf": "PDF 생성",
+    "generating": "PDF 생성 중...",
+    "editMarkdown": "Markdown 편집",
+    "preview": "PDF 미리보기",
+    "previewDescription": "PDF가 이렇게 보일 것입니다",
+    "emptyMarkdownWarning": "Markdown 내용이 비어 있을 수 없습니다",
+    "pdfGenerationError": "PDF 생성 중 오류가 발생했습니다. 다시 시도해 주세요.",
+    "instructions": "사용 방법",
+    "instruction1": "편집기에서 Markdown 내용을 편집하세요",
+    "instruction2": "위의 설정으로 모양을 사용자 지정하세요",
+    "instruction3": "미리보기를 사용하여 문서가 어떻게 보일지 확인하세요",
+    "instruction4": "파일명을 입력하세요 (.pdf 확장자 없이)",
+    "instruction5": "'PDF 생성'을 클릭하여 문서를 다운로드하세요",
+    "pdfNote": "렌더링 차이로 인해 최종 PDF는 미리보기와 약간 다를 수 있습니다.",
+    "pageSetupNote": "페이지 설정:",
+    "pageSetupNoteDesc": "선택한 페이지 크기에 따라 문서가 형식화됩니다."
   }
 }

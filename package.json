@@ -61,6 +61,7 @@
     "@vercel/analytics": "^1.5.0",
     "autoprefixer": "^10.4.14",
     "clsx": "^2.1.1",
+    "html2pdf.js": "^0.10.3",
     "lucide-react": "^0.468.0",
     "modern-screenshot": "^4.4.39",
     "next": "^14.1.0",

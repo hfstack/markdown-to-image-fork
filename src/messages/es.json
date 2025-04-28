@@ -3,7 +3,8 @@
     "home": "Markdown a Póster",
     "about": "Acerca de",
     "switchLocale": "Cambiar a {locale}",
-    "md2richTxt": "Markdown a Texto Enriquecido"
+    "md2richTxt": "Markdown a Texto Enriquecido",
+    "md2pdf": "Markdown a PDF"
   },
   "common": {
     "welcome": "Bienvenido",
@@ -74,5 +75,43 @@
     "preview": "Vista previa de texto enriquecido",
     "previewDescription": "La renderización de texto enriquecido se muestra arriba, haz clic en \"Copiar texto enriquecido\" para copiar este contenido como texto enriquecido",
     "copyRichText": "Copiar texto enriquecido"
+  },
+  "md2pdf": {
+    "title": "Convertidor de Markdown a PDF",
+    "settings": "Configuración PDF",
+    "theme": "Tema",
+    "light": "Claro",
+    "dark": "Oscuro",
+    "blue": "Azul",
+    "green": "Verde",
+    "fontSize": "Tamaño de fuente",
+    "small": "Pequeño",
+    "medium": "Mediano",
+    "large": "Grande",
+    "fontFamily": "Tipo de fuente",
+    "default": "Predeterminado (Sans-serif)",
+    "serif": "Serif",
+    "mono": "Monoespaciado",
+    "pageSize": "Tamaño de página",
+    "letter": "Carta",
+    "legal": "Legal",
+    "filename": "Nombre del archivo",
+    "filenameHint": "Ingrese nombre sin extensión",
+    "generatePdf": "Generar PDF",
+    "generating": "Generando PDF...",
+    "editMarkdown": "Editar Markdown",
+    "preview": "Vista previa PDF",
+    "previewDescription": "Así se verá su PDF",
+    "emptyMarkdownWarning": "El contenido Markdown no puede estar vacío",
+    "pdfGenerationError": "Error al generar PDF. Inténtelo de nuevo.",
+    "instructions": "Instrucciones",
+    "instruction1": "Edite su contenido Markdown en el editor",
+    "instruction2": "Personalice la apariencia con la configuración anterior",
+    "instruction3": "Use la vista previa para ver cómo se verá su documento",
+    "instruction4": "Ingrese un nombre de archivo (sin extensión .pdf)",
+    "instruction5": "Haga clic en 'Generar PDF' para descargar su documento",
+    "pdfNote": "El PDF final puede verse ligeramente diferente de la vista previa debido a diferencias de renderizado.",
+    "pageSetupNote": "Configuración de página:",
+    "pageSetupNoteDesc": "Su documento se formateará según el tamaño de página seleccionado."
   }
 }

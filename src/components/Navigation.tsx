@@ -35,6 +35,9 @@ export default function Navigation() {
           <li className="hover:text-primary transition-colors py-2 md:py-0">
             <Link href="/md2richTxt" locale={locale}>{t('md2richTxt')}</Link>
           </li>
+          <Link href="/md2pdf" locale={locale} className="hover:text-primary transition-colors py-2 md:py-0">
+            <Link href="/md2pdf" locale={locale}>{t('md2pdf')}</Link>
+          </Link>
         </ul>
       </nav>
       

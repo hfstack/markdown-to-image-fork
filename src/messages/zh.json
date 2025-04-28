@@ -3,7 +3,8 @@
     "home": "Markdown转海报",
     "about": "关于",
     "switchLocale": "切换到{locale}",
-    "md2richTxt": "Markdown转富文本"
+    "md2richTxt": "Markdown转富文本",
+    "md2pdf": "Markdown转PDF"
   },
   "common": {
     "welcome": "欢迎",
@@ -74,5 +75,43 @@
     "preview": "富文本预览",
     "previewDescription": "上方是富文本渲染效果，点击\"复制富文本内容\"可将此内容以富文本格式复制到剪贴板",
     "copyRichText": "复制富文本内容"
+  },
+  "md2pdf": {
+    "title": "Markdown 转 PDF 转换器",
+    "settings": "PDF 设置",
+    "theme": "主题",
+    "light": "浅色",
+    "dark": "深色",
+    "blue": "蓝色",
+    "green": "绿色",
+    "fontSize": "字体大小",
+    "small": "小",
+    "medium": "中",
+    "large": "大",
+    "fontFamily": "字体族",
+    "default": "默认（无衬线）",
+    "serif": "衬线字体",
+    "mono": "等宽字体",
+    "pageSize": "页面尺寸",
+    "letter": "信纸尺寸",
+    "legal": "法律文书尺寸",
+    "filename": "文件名",
+    "filenameHint": "输入文件名（不含扩展名）",
+    "generatePdf": "生成 PDF",
+    "generating": "正在生成 PDF...",
+    "editMarkdown": "编辑 Markdown",
+    "preview": "PDF 预览",
+    "previewDescription": "您的PDF将会是这样的效果",
+    "emptyMarkdownWarning": "Markdown内容不能为空",
+    "pdfGenerationError": "生成PDF时出错。请重试。",
+    "instructions": "使用说明",
+    "instruction1": "在编辑器中编辑您的Markdown内容",
+    "instruction2": "使用上方的设置自定义外观",
+    "instruction3": "使用预览查看文档效果",
+    "instruction4": "输入文件名（无需.pdf后缀）",
+    "instruction5": "点击\"生成PDF\"下载您的文档",
+    "pdfNote": "由于渲染差异，最终生成的PDF可能与预览略有不同。",
+    "pageSetupNote": "页面设置：",
+    "pageSetupNoteDesc": "您的文档将根据所选的页面尺寸进行格式化。"
   }
 }

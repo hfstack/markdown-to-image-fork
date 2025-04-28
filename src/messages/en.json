@@ -3,7 +3,8 @@
     "home": "Markdown to Poster",
     "about": "About",
     "switchLocale": "Switch to {locale}",
-    "md2richTxt": "Markdown to Rich Text"
+    "md2richTxt": "Markdown to Rich Text",
+    "md2pdf": "Markdown to PDF"
   },
   "common": {
     "welcome": "Welcome",
@@ -74,5 +75,43 @@
     "preview": "Rich Text Preview",
     "previewDescription": "The rich text rendering is shown above, click \"Copy Rich Text\" to copy this content as rich text",
     "copyRichText": "Copy Rich Text"
+  },
+  "md2pdf": {
+    "title": "Markdown to PDF Converter",
+    "settings": "PDF Settings",
+    "theme": "Theme",
+    "light": "Light",
+    "dark": "Dark",
+    "blue": "Blue",
+    "green": "Green",
+    "fontSize": "Font Size",
+    "small": "Small",
+    "medium": "Medium",
+    "large": "Large",
+    "fontFamily": "Font Family",
+    "default": "Default (Sans-serif)",
+    "serif": "Serif",
+    "mono": "Monospace",
+    "pageSize": "Page Size",
+    "letter": "Letter",
+    "legal": "Legal",
+    "filename": "Filename",
+    "filenameHint": "Enter filename without extension",
+    "generatePdf": "Generate PDF",
+    "generating": "Generating PDF...",
+    "editMarkdown": "Edit Markdown",
+    "preview": "PDF Preview",
+    "previewDescription": "This is how your PDF will look",
+    "emptyMarkdownWarning": "Markdown content cannot be empty",
+    "pdfGenerationError": "Error generating PDF. Please try again.",
+    "instructions": "Instructions",
+    "instruction1": "Edit your Markdown content in the editor",
+    "instruction2": "Customize appearance with the settings above",
+    "instruction3": "Use the preview to see how your document will look",
+    "instruction4": "Enter a filename (without .pdf extension)",
+    "instruction5": "Click 'Generate PDF' to download your document",
+    "pdfNote": "The final PDF may look slightly different from the preview due to rendering differences.",
+    "pageSetupNote": "Page Setup:",
+    "pageSetupNoteDesc": "Your document will be formatted according to the selected page size."
   }
 }
