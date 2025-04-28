@@ -1,3 +1,8 @@
+/**
+ * @deprecated 这个组件已被弃用。请使用 generateMetadata.ts 中的 generateMetadata 函数代替。
+ * Next.js 应用推荐使用元数据 API 代替 <Head> 组件。
+ */
+
 import { useParams } from 'next/navigation';
 import Head from 'next/head';
 
@@ -67,7 +72,7 @@ export default function MultilangSEO({
   const keywords = customKeywords || currentLocaleMeta.keywords;
   
   // 网站域名
-  const siteUrl = 'https://readpo.com';
+  const siteUrl = 'https://www.md2poster.com';
   
   // 构建规范链接和替代语言链接
   const canonicalUrl = `${siteUrl}/${locale}${canonicalPath ? `/${canonicalPath}` : ''}`;
