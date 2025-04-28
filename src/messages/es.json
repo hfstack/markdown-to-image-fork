@@ -1,6 +1,6 @@
 {
   "navigation": {
-    "home": "Inicio",
+    "home": "Markdown a Póster",
     "about": "Acerca de",
     "switchLocale": "Cambiar a {locale}",
     "md2richTxt": "Markdown a Texto Enriquecido"
@@ -75,4 +75,4 @@
     "previewDescription": "La renderización de texto enriquecido se muestra arriba, haz clic en \"Copiar texto enriquecido\" para copiar este contenido como texto enriquecido",
     "copyRichText": "Copiar texto enriquecido"
   }
-} 
+}

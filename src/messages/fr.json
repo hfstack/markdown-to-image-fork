@@ -1,6 +1,6 @@
 {
   "navigation": {
-    "home": "Accueil",
+    "home": "Markdown vers Affiche",
     "about": "À propos",
     "switchLocale": "Passer à {locale}",
     "md2richTxt": "Markdown vers Texte Enrichi"
@@ -75,4 +75,4 @@
     "previewDescription": "Le rendu du texte enrichi est affiché ci-dessus, cliquez sur \"Copier le texte enrichi\" pour copier ce contenu en tant que texte enrichi",
     "copyRichText": "Copier le texte enrichi"
   }
-} 
+}

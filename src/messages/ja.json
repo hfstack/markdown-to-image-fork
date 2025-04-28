@@ -1,6 +1,6 @@
 {
   "navigation": {
-    "home": "ホーム",
+    "home": "Markdownからポスターへ",
     "about": "概要",
     "switchLocale": "{locale}に切り替える",
     "md2richTxt": "Markdownからリッチテキストへ"
@@ -75,4 +75,4 @@
     "previewDescription": "上にリッチテキストのレンダリングが表示されています。「リッチテキストをコピー」をクリックして、このコンテンツをリッチテキストとしてコピーします",
     "copyRichText": "リッチテキストをコピー"
   }
-} 
+}

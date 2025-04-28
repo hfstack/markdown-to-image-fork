@@ -1,6 +1,6 @@
 {
   "navigation": {
-    "home": "首页",
+    "home": "Markdown转海报",
     "about": "关于",
     "switchLocale": "切换到{locale}",
     "md2richTxt": "Markdown转富文本"
@@ -75,4 +75,4 @@
     "previewDescription": "上方是富文本渲染效果，点击\"复制富文本内容\"可将此内容以富文本格式复制到剪贴板",
     "copyRichText": "复制富文本内容"
   }
-} 
+}

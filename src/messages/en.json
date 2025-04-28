@@ -1,6 +1,6 @@
 {
   "navigation": {
-    "home": "Home",
+    "home": "Markdown to Poster",
     "about": "About",
     "switchLocale": "Switch to {locale}",
     "md2richTxt": "Markdown to Rich Text"
@@ -75,4 +75,4 @@
     "previewDescription": "The rich text rendering is shown above, click \"Copy Rich Text\" to copy this content as rich text",
     "copyRichText": "Copy Rich Text"
   }
-} 
+}

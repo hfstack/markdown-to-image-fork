@@ -38,31 +38,29 @@ export default function LanguageSwitcher() {
   
   return (
     <div className="relative" ref={dropdownRef}>
-      {/* 下拉按钮 */}
       <button 
-        className="px-3 py-1 rounded-md bg-gray-100 hover:bg-gray-200 flex items-center gap-1"
+        className="px-4 py-2 rounded-full bg-gray-100/80 hover:bg-gray-200/80 transition-all duration-200 flex items-center gap-2 text-sm font-medium text-gray-700"
         onClick={() => setIsOpen(!isOpen)}
         aria-haspopup="true"
         aria-expanded={isOpen}
       >
         {LOCALE_NAMES[locale]}
-        <svg className={`w-4 h-4 ml-1 transition-transform ${isOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <svg className={`w-4 h-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
         </svg>
       </button>
       
-      {/* 下拉菜单 */}
       {isOpen && (
-        <div className="absolute right-0 mt-1 w-40 bg-white rounded-md shadow-lg z-10 border border-gray-200">
+        <div className="absolute right-0 mt-2 w-48 bg-white/80 backdrop-blur-lg rounded-2xl shadow-lg border border-gray-200/50 overflow-hidden">
           {SUPPORTED_LOCALES.map((lang) => (
             <Link 
               key={lang}
               href={pathname} 
               locale={lang} 
-              className={`block px-4 py-2 text-sm hover:bg-blue-50 ${
+              className={`block px-4 py-3 text-sm transition-colors duration-200 ${
                 locale === lang 
-                  ? 'font-bold text-blue-500 bg-blue-50' 
-                  : 'text-gray-700'
+                  ? 'text-blue-600 bg-blue-50/50 font-medium' 
+                  : 'text-gray-700 hover:bg-gray-50/50'
               }`}
               onClick={() => setIsOpen(false)}
             >

@@ -1,6 +1,6 @@
 {
   "navigation": {
-    "home": "홈",
+    "home": "Markdown에서 포스터로",
     "about": "소개",
     "switchLocale": "{locale}(으)로 전환",
     "md2richTxt": "Markdown에서 서식 있는 텍스트로"
@@ -75,4 +75,4 @@
     "previewDescription": "위에 서식 있는 텍스트 렌더링이 표시됩니다. \"서식 있는 텍스트 복사\"를 클릭하여 이 내용을 서식 있는 텍스트로 복사하세요",
     "copyRichText": "서식 있는 텍스트 복사"
   }
-} 
+}
