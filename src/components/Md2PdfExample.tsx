@@ -412,7 +412,7 @@ const Md2PdfExample = () => {
         filename: `${filename || 'markdown-document'}.pdf`,
         image: { type: 'jpeg', quality: 0.98 },
         html2canvas: { scale: 2, useCORS: true },
-        jsPDF: { unit: 'mm', format: pageSize, orientation: 'portrait' }
+        jsPDF: { unit: 'mm', format: pageSize, orientation: 'portrait' as 'portrait' | 'landscape' }
       }
       
       // 生成PDF
